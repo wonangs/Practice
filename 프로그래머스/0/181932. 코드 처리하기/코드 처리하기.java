@@ -20,10 +20,6 @@ class Solution {
         }
 
         answer = sb.toString();
-        if (answer.isEmpty()) {
-            return "EMPTY";
-        } else {
-            return answer;
-        }
+        return answer.isEmpty() ? "EMPTY" : answer;
     }
 }
