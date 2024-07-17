@@ -1,19 +1,6 @@
 class Solution {
     public int solution(String myString, String pat) {
-        int answer = 0;
-        StringBuilder sb = new StringBuilder();
-        
-       for (char ch : myString.toCharArray()) { // sb를 charArray로 하나씩 읽음
-            if (ch == 'A') {
-                sb.append('B');
-            } else {
-                sb.append('A');
-            }
-        }
-        
-        if (sb.toString().contains(pat))
-            return 1;
-        else
-            return 0;
+        myString = myString.replace("A", "a").replace("B", "A").replace("a", "B"); // 소문자로 바꾼 뒤 해결
+        return myString.contains(pat) ? 1 : 0;
     }
 }
