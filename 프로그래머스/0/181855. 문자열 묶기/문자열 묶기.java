@@ -9,12 +9,10 @@ class Solution {
             cnt[length]++;
         }
 
-        // 최대값 찾기
+        // 최대값 찾기(메서드 사용)
         int max = 0;
         for (int count : cnt) {
-            if (count > max) {
-                max = count;
-            }
+            max = Math.max(max, count);
         }
 
         return max;
